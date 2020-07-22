@@ -15,3 +15,8 @@ use Illuminate\Support\Facades\Route;
 /* just need the route and what controller function you want to run when you arrive at that route */
 
 Route::get('/', 'HomeController@index');
+
+
+Route::post('/create', 'NoteController@create');
+
+Route::get('/note/{id}', 'NoteController@view')
