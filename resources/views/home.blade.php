@@ -28,7 +28,8 @@ Recent Notes:
         {{ $note->content }}
         <br/>
         {{ $note->created_at->diffForHumans() }}
-
+        <br/>
+    <a href="/note/{{$note->id}}">View Note</a>
     </li>
     @endforeach
 </ul>

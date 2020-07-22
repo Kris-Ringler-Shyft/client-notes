@@ -19,4 +19,4 @@ Route::get('/', 'HomeController@index');
 
 Route::post('/create', 'NoteController@create');
 
-Route::get('/note/{id}', 'NoteController@view')
+Route::get('/note/{id}', 'NoteController@view');

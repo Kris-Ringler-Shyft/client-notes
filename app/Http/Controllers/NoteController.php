@@ -18,4 +18,13 @@ class NoteController extends Controller
 
         return redirect('/');
     }
+
+
+    public function view($id)
+    {
+        $note = Note::findOrFail($id);
+        return view('note', [
+            'note' => $note
+        ]);
+    }
 }
