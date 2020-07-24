@@ -11,7 +11,7 @@ class ClientController extends Controller
     {
 
         $client = new Client();
-        $client->title = $request->title;
+        $client->name = $request->name;
 
 
         $client->save();

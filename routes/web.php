@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index');
 
 
-Route::post('/create', 'NoteController@create');
+Route::post('/create-client', 'ClientController@create');
 
 Route::get('/note/{id}', 'NoteController@view');
