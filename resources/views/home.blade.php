@@ -13,30 +13,30 @@
 
 
 <body>
-    Create Note:
+    Create Client:
 
-<form action="/create" method="post">
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="content" placeholder="Content">
+<form action="/create-client" method="post">
+    <input type="text" name="title" placeholder="Client Name">
+
     {{ csrf_field() }}
-    <button type="submit">Create Note</button>
+    <button type="submit">Create Client</button>
 </form>
 
 <div class="panel-group" id="accordion"> <!-- accordion 1 -->
-   @foreach($notes as $note)
+   @foreach($clients as $client)
   <div class="panel-group" id="accordion"> <!-- accordion 1 -->
    <div class="panel panel-primary">
         <div class="panel-heading"> <!-- panel-heading -->
             <h4 class="panel-title"> <!-- title 1 -->
             <a data-toggle="collapse" data-parent="#accordion" href="#accordion{{$note->id}}">
-            {{$note->title}}
+            {{$client->title}}
             </a>
            </h4>
         </div>
         <!-- panel body -->
-    <div id="accordion{{$note->id}}" class="panel-collapse collapse in">
+    <div id="accordion{{$client->id}}" class="panel-collapse collapse in">
           <div class="panel-body">
-          {{$note->content}} <a href="note/{{$note->id}}" target="_blank">View Note</a>
+          {{$client->notes}} <a href="note/{{$note->id}}" target="_blank">View Note</a>
           </div>
         </div>
   </div>
